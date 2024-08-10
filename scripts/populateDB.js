@@ -1,0 +1,1 @@
+// simple script to populate the database with some data in case we delete the database due to schema change

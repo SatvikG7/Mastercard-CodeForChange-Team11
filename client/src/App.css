@@ -1,0 +1,9 @@
+.login-side{
+  background: url('https://img.freepik.com/premium-photo/open-book-with-blue-sky-clouds_145644-18852.jpg?w=1060');
+  background-size: cover;
+  background-position: center;
+  min-width: 600px;
+}
+.Toastify{
+  position: absolute;
+}
