@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 /**
  * Generates a JSON Web Token (JWT) with the provided user ID.
@@ -6,7 +7,17 @@ const jwt = require("jsonwebtoken");
  * @returns {string} - The generated JWT.
  */
 const createToken = (_id) => {
-  return jwt.sign({ _id }, "secret", { expiresIn: "3d" });
+    return jwt.sign({ _id }, process.env.JWT_SECRET, { expiresIn: "3d" });
 };
 
-module.exports = createToken;
+/**
+ * Verifies a JWT token.
+ *
+ * @param {string} token - The JWT token to verify.
+ * @returns {object} - The decoded token payload.
+ */
+const verifyToken = (token) => {
+    return jwt.verify(token, process.env.JWT_SECRET);
+};
+
+module.exports = { createToken, verifyToken };
