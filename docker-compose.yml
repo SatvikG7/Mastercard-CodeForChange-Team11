@@ -1,0 +1,54 @@
+version: "3"
+
+services:
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./server/.env
+    volumes:
+      - ./server:/usr/src/app
+    networks:
+      - mern-network
+    depends_on:
+      - mongo
+
+  client:
+    build: ./client
+    volumes:
+      - ./client:/usr/src/app
+    networks:
+      - mern-network
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./client/dist:/usr/share/nginx/html
+    depends_on:
+      - client
+    networks:
+      - mern-network
+
+  mongo:
+    image: mongo:latest
+    restart: always
+    ports:
+      - "2717:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - mern-network
+
+volumes:
+  mongo-data:
+   
+networks:
+  mern-network:
+    driver: bridge
