@@ -19,7 +19,7 @@ router.post("/login", loginUser);
 
 // signup route
 router.post("/signup", 
-    uploadFile.single("profilePicture"),
+    uploadFile.fields([{ name: 'profilePicture', maxCount: 0 }]),
     signupUser);
 
 // get all users

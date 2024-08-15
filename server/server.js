@@ -21,12 +21,12 @@ app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(limiter);
+// CHANGE BEFORE PRODUCTION
 
 connectDB();
 
 // Routes
 const auth = require("./routes/user");
-// app.get("/", ()=>(req,res)=>{res.send("default route")});
 
 app.get("/", (req,res)=>{res.send("default route")});
 app.use("/auth", auth);
