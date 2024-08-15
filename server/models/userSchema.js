@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const validator = require("validator");
 const Schema = mongoose.Schema;
+const jwt = require("jsonwebtoken");
 
 const userSchema = new Schema({
     name: {
@@ -21,6 +22,9 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
+    refreshToken: {
+        type: String
+    }
 });
 
 // static signup method
@@ -30,7 +34,8 @@ userSchema.statics.signup = async function (email, name, role, password) {
         throw Error("All fields must be filled");
     }
     if (!validator.isEmail(email)) {
-        throw Error("Email not valid");
+        // throw Error("Email not valid");
+        // CHANGE BEFORE PRODUCTION
     }
 
     const exists = await this.findOne({ email });
@@ -72,5 +77,29 @@ userSchema.statics.login = async function (email, password) {
     delete user._doc.password;
     return user;
 };
+
+userSchema.methods.generateAccessToken = function(){
+    return jwt.sign(
+        {
+            _id: this._id,
+        },
+        process.env.ACCESS_TOKEN_SECRET,
+        {
+            expiresIn: process.env.ACCESS_TOKEN_EXPIRY
+        }
+    )
+}
+
+userSchema.methods.generateRefreshToken = function(){
+    return jwt.sign(
+        {
+            _id: this._id,
+        },
+        process.env.REFRESH_TOKEN_SECRET,
+        {
+            expiresIn: process.env.REFRESH_TOKEN_EXPIRY
+        }
+    )
+}
 
 module.exports = mongoose.model("User", userSchema);
