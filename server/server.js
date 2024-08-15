@@ -13,20 +13,26 @@ const limiter = rateLimit({
 });
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+}))
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(limiter);
+// app.use(limiter);
 
 connectDB();
 
 // Routes
 const auth = require("./routes/user");
+// app.get("/", ()=>(req,res)=>{res.send("default route")});
+
+app.get("/", (req,res)=>{res.send("default route")});
 app.use("/auth", auth);
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-    console.log("Server is runnning...");
+    console.log(`Server is runnning on port ${PORT}`);
 });

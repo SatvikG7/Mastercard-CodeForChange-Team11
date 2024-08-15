@@ -10,13 +10,17 @@ const { signupUser } = require("../controllers/auth/signup");
 const { deleteUser } = require("../controllers/auth/delete");
 const { users } = require("../controllers/auth/users");
 
+const {uploadFile} = require("../middleware/multer.middleware");
+
 const router = express.Router();
 
 // login route
 router.post("/login", loginUser);
 
 // signup route
-router.post("/signup", signupUser);
+router.post("/signup", 
+    uploadFile.single("profilePicture"),
+    signupUser);
 
 // get all users
 router.get("/users", isAdmin, users);
