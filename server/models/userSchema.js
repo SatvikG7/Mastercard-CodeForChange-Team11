@@ -3,25 +3,32 @@ const bcrypt = require("bcryptjs");
 const validator = require("validator");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
+const userSchema = new Schema(
+    {
+        name: {
+            type: String,
+            required: true,
+        },
+        email: {
+            type: String,
+            required: true,
+            unique: true,
+            validate:[validator.isEmail, 'Invalid email']
+        },
+        role: {
+            type: String,
+            required: false,
+            enum: { values: ['user', 'admin'], message: '{VALUE} is not supported. Please use: user/admin' },
+            default: "user"
+        },
+        password: {
+            type: String,
+            required: true,
+        },
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    role: {
-        type: String,
-        required: false,
-    },
-    password: {
-        type: String,
-        required: true,
-    },
-});
+    {
+        timestamps: true
+    });
 
 // static signup method
 userSchema.statics.signup = async function (email, name, role, password) {
