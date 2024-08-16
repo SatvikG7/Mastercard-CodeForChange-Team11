@@ -2,16 +2,23 @@ const User = require("../models/userSchema");
 const { verifyToken } = require("../utils/jwt");
 
 const isAdmin = async (req, res, next) => {
-    const token = req.header("Authorization")?.replace("Bearer ", "");
+    const a1= req.cookies?.accessToken;
+    const a2= req.header("Authorization")?.replace("Bearer ", "");
+    const a3= req.headers.cookie;
+    const accessToken = req.cookies?.accessToken;
+    console.log("a1 is ",a1);
+    console.log("a2 is ",a2);
+    console.log("a3 is ",a3);
 
-    if (!token) {
+    console.log("read tokens as \n ac:", accessToken);
+    if (!accessToken) {
         return res
             .status(401)
             .json({ error: "Admin Authorization token required" });
     }
 
     try {
-        const { _id } = verifyToken(token);
+        const { _id } = verifyToken(accessToken);
         const user = await User.findOne({ _id }).select("_id role");
 
         if (!user) {

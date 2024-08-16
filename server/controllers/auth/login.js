@@ -3,8 +3,8 @@ const { createToken } = require("../../utils/jwt");
 const {generateAccessAndRefreshTokens}=require("../../utils/accessAndRefreshTokenGeneration");
 
 const options = {
-    httpOnly: true,
-    secure: true
+    // httpOnly: true,
+    // secure: true
 }
 
 const loginUser = async (req, res) => {
@@ -13,9 +13,11 @@ const loginUser = async (req, res) => {
     try {
         const user = await User.login(email, password);
 
-        const {accessToken, refreshToken} = generateAccessAndRefreshTokens(user._id);
+        let {accessToken, refreshToken} = await generateAccessAndRefreshTokens(user._id);
 
         console.log("the user we have is" ,user);
+        console.log("the access token we have is" ,accessToken);
+        console.log("the refresh token we have is" ,refreshToken);
 
         res.status(200)
         .cookie("accessToken", accessToken, options)

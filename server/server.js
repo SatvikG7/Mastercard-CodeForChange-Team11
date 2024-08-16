@@ -5,6 +5,7 @@ const app = express();
 const connectDB = require("./config/connectDB");
 const cors = require("cors");
 const requireAuth = require("./middleware/requireAuth");
+const cookieParser = require('cookie-parser');
 
 // Rate Limiting
 const limiter = rateLimit({
@@ -17,6 +18,7 @@ app.use(cors({
     origin: process.env.CORS_ORIGIN,
     credentials: true
 }))
+app.use(cookieParser());
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -26,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 // Routes
-const auth = require("./routes/user");
+const auth = require("./routes/user.routes");
 
 app.get("/", (req,res)=>{res.send("default route")});
 app.use("/auth", auth);

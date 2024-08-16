@@ -2,8 +2,8 @@ const User = require("../../models/userSchema");
 const { createToken } = require("../../utils/jwt");
 
 const options = {
-    httpOnly: true,
-    secure: true
+    // httpOnly: true,
+    // secure: true
 }
 
 const signupUser = async (req, res) => {

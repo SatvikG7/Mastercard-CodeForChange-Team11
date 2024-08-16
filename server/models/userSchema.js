@@ -83,7 +83,7 @@ userSchema.methods.generateAccessToken = function(){
         {
             _id: this._id,
         },
-        process.env.ACCESS_TOKEN_SECRET,
+        process.env.JWT_SECRET,
         {
             expiresIn: process.env.ACCESS_TOKEN_EXPIRY
         }
@@ -95,7 +95,7 @@ userSchema.methods.generateRefreshToken = function(){
         {
             _id: this._id,
         },
-        process.env.REFRESH_TOKEN_SECRET,
+        process.env.JWT_SECRET,
         {
             expiresIn: process.env.REFRESH_TOKEN_EXPIRY
         }

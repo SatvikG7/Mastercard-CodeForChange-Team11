@@ -3,8 +3,8 @@ const { verifyToken } = require("../utils/jwt");
 
 
 const options = {
-    httpOnly: true,
-    secure: true
+    // httpOnly: true,
+    secure: process.env.NODE_ENV === "production"
 }
 
 /**
@@ -17,9 +17,10 @@ const options = {
  */
 const requireAuth = async (req, res, next) => {
     try {
-
-        const accessToken = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "");
+        const accessToken = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "") || req.headers.cookie
         const refreshToken = req.cookies?.refreshToken;
+
+        console.log("read tokens as \n ac:", accessToken, "\n rf:",refreshToken);
 
         const { accessTokenid } = verifyToken(accessToken);
         accessTokenUser = await User.findOne({ _id: accessTokenid }).select("_id");
