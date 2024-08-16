@@ -1,5 +1,5 @@
 const User = require("../models/userSchema");
-const { verifyToken } = require("../utils/jwt");
+const { verifyToken, verifyAccessToken, verifyRefreshToken } = require("../utils/jwt");
 
 
 const options = {
@@ -19,10 +19,11 @@ const requireAuth = async (req, res, next) => {
     try {
         const accessToken = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "") || req.headers.cookie
         const refreshToken = req.cookies?.refreshToken;
+        // TODO READ refreshToken FROM req.header
 
         console.log("read tokens as \n ac:", accessToken, "\n rf:",refreshToken);
 
-        const { accessTokenid } = verifyToken(accessToken);
+        const { accessTokenid } = verifyAccessToken(accessToken);
         accessTokenUser = await User.findOne({ _id: accessTokenid }).select("_id");
 
         if (accessTokenUser) {
@@ -31,7 +32,7 @@ const requireAuth = async (req, res, next) => {
         }
 
         else {
-            const { refreshTokenid } = verifyToken(refreshToken);
+            const { refreshTokenid } = verifyRefreshToken(refreshToken);
             let refreshTokenUser = await User.findOne({ _id: refreshTokenid });
 
             if (!refreshTokenUser || refreshTokenUser.refreshToken !== refreshToken) {

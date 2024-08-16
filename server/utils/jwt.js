@@ -20,4 +20,23 @@ const verifyToken = (token) => {
     return jwt.verify(token, process.env.JWT_SECRET);
 };
 
-module.exports = { createToken, verifyToken };
+const verifyAccessToken = (token) => {
+    try {
+        const payload = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+        console.log("access token payload", payload);
+        return payload;
+    } catch (error) {
+        console.log("access token verification failed due to error: ", error);
+    }
+};
+
+const verifyRefreshToken = (token) => {
+    try {
+        const payload = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
+        return payload;
+    } catch (error) {
+        console.log("Refresh token verification failed due to error: ", error);
+    }
+};
+
+module.exports = { createToken, verifyToken, verifyAccessToken, verifyRefreshToken };

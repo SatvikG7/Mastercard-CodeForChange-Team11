@@ -4,7 +4,6 @@ const rateLimit = require("express-rate-limit");
 const app = express();
 const connectDB = require("./config/connectDB");
 const cors = require("cors");
-const requireAuth = require("./middleware/requireAuth");
 const cookieParser = require('cookie-parser');
 
 // Rate Limiting
