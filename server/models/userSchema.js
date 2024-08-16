@@ -25,6 +25,9 @@ const userSchema = new Schema({
     refreshToken: {
         type: String
     }
+},
+{
+    timestamps: true
 });
 
 // static signup method

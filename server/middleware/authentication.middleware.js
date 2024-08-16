@@ -23,7 +23,7 @@ const requireAuth = async (req, res, next) => {
 
         console.log("read tokens as \n ac:", accessToken, "\n rf:",refreshToken);
 
-        const { accessTokenid } = verifyAccessToken(accessToken);
+        const accessTokenid = verifyAccessToken(accessToken)?._id;
         accessTokenUser = await User.findOne({ _id: accessTokenid }).select("_id");
 
         if (accessTokenUser) {
@@ -32,7 +32,7 @@ const requireAuth = async (req, res, next) => {
         }
 
         else {
-            const { refreshTokenid } = verifyRefreshToken(refreshToken);
+            const refreshTokenid = verifyRefreshToken(refreshToken)?._id;
             let refreshTokenUser = await User.findOne({ _id: refreshTokenid });
 
             if (!refreshTokenUser || refreshTokenUser.refreshToken !== refreshToken) {

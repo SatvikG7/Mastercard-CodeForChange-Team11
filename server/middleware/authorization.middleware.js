@@ -1,6 +1,11 @@
 const User = require("../models/userSchema");
 const { verifyToken, verifyAccessToken, verifyRefreshToken } = require("../utils/jwt");
 
+const options = {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production"
+};
+
 const isAdmin = async (req, res, next) => {
     try {
         const accessToken = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "");
