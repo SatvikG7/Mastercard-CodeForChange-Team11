@@ -1,3 +1,5 @@
+import StripeBuyButton from "./StripeBuyButton";
+
 const Footer = () => {
   return (
     <footer className="bg-white rounded-lg  m-4">
@@ -11,6 +13,8 @@ const Footer = () => {
               {"<Code for Change> Team 11"}
             </span>
           </a>
+          <StripeBuyButton />
+
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
             <li>
               <a href="./about/" className="hover:underline me-4 md:me-6">
