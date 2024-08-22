@@ -25,6 +25,10 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
+        proImg: {// Profile Image
+            type: String,
+            required: false,
+        }
     },
     {
         timestamps: true

@@ -1,0 +1,31 @@
+.upload-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.upload-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.upload-icon {
+    margin-right: 8px;
+}
+
+.loading-message {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #007BFF;
+}
+
+.success-message {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #28A745; /* Green color for success */
+}
