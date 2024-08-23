@@ -1,7 +1,7 @@
 
 const About = () => {
     return (
-<div className="py-26 bg-gradient-to-r from-[rgb(217,112,37)] to-white rounded-2xl px-8">
+<div className="overflow-scroll py-26 bg-gradient-to-r from-[rgb(217,112,37)] to-white rounded-2xl px-8">
     <div className="max-w-5xl pt-10 lg:px-8 p-4 mx-auto">
         <div className="flex flex-col space-y-8"> {/* Flex container with equal vertical spacing */}
             <a
