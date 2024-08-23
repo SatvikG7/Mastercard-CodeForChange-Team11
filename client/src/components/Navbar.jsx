@@ -18,14 +18,16 @@ const Navbar = ({ page }) => {
           <nav className="bg-white border-gray-200 dark:bg-gray-900">
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
               <a href="https://flowbite.com" className="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="/mc.svg" className="h-8" alt="MasterCard Logo" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_ICVLVxM2YETZjJFi6-yHr1D4Y_ul8RrY_A&s" className="h-10" alt="MasterCard Logo" />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  NGO Organization name
+                 <h1>Y4D - Beneficiary Management System</h1>
                 </span>
               </a>
-              <div className="flex items-center space-x-6 rtl:space-x-reverse">
+              <div className="flex items-center space-x-1 rtl:space-x-reverse">
+                <img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/whatsapp-873316_1280.png" className="h-9" alt="whastapp"/>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2iN0nGbRtwii1D4Ft4vkO729jmT_1t3fdCw&s" className="h-5" alt="call"/>
                 <a href="tel:5541251234" className="text-sm text-gray-500 dark:text-white hover:underline">
-                  (555) 412-1234
+                  (+91) 8282828811
                 </a>
                 {!user ? (
                   <li>
@@ -37,7 +39,6 @@ const Navbar = ({ page }) => {
                   <LogoutButton />
                 )}
                 {/* Button to the right of Login */}
-                <button href="./ai" className="nav-btn">AI</button>
               </div>
             </div>
           </nav>
@@ -85,28 +86,33 @@ const Navbar = ({ page }) => {
                 : "hidden w-full md:block md:w-auto"
             }
             id="navbar-default">
-            <nav className="bg-[rgb(185,185,120)] dark:bg-gray-700">
+            <nav className="bg-[rgb(230,169,126)] dark:bg-gray-700">
               <div className="max-w-screen-xl px-4 py-3 mx-auto">
                 <div className="flex items-center">
                   <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                     <li>
                       <a href="/" className="text-gray-900 dark:text-white hover:underline" aria-current="page">
-                        Home
+                        <b>Home</b>
                       </a>
                     </li>
                     <li>
                       <a href="/about" className="text-gray-900 dark:text-white hover:underline py-1">
-                        About us
+                        <b>Programs</b>
                       </a>
                     </li>
                     <li>
                       <a href="/programs" className="text-gray-900 dark:text-white hover:underline py-1">
-                        Admin Dashboard
+                        <b>Dashboard</b>
                       </a>
                     </li>
                     <li>
                       <a href="/donation" className="text-gray-900 dark:text-white hover:underline py-1">
-                        Donation
+                        <b>Donation</b>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/about" className="text-gray-900 dark:text-white hover:underline py-1">
+                      <b>About us</b>
                       </a>
                     </li>
 

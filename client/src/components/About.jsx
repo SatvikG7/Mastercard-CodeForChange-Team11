@@ -1,47 +1,55 @@
 
 const About = () => {
     return (
-<div className="py-26 bg-gradient-to-r from-[rgb(185,185,120)] to-white rounded-2xl px-8">
+<div className="py-26 bg-gradient-to-r from-[rgb(217,112,37)] to-white rounded-2xl px-8">
     <div className="max-w-5xl pt-10 lg:px-8 p-4 mx-auto">
         <div className="flex flex-col space-y-8"> {/* Flex container with equal vertical spacing */}
             <a
                 href="#"
                 className="flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-8">
                 <img
-                    className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg"
-                    src="/docs/images/blog/image-4.jpg"
+                    className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg mr-3"
+                    src="https://i.pinimg.com/474x/44/27/92/442792d343e2b6b84c76caf5ac6be243.jpg"
                     alt=""
                 />
                 <div className="flex flex-col justify-between leading-normal">
-                    <h5 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Noteworthy technology acquisitions 2021
+                    <h5 className="mb-6 text-5xl font-bold tracking-tight text-orange-500 dark:text-white">
+                        Y4D Foundation
                     </h5>
                     <p className="mb-6 font-normal text-gray-700 dark:text-gray-400 text-lg">
-                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                       <b>- Child Upliftment</b> <br/>
+                            The efforts made to improve the well being, education and overall well-being of children. <br/>
+                      
+                       <b>- Youth Empowerment  </b> <br/>
+                            Creates opportunity and environment where young people can develop skills, confidence and influence their own lives contributing positively to the society.<br/> 
+                       <b>- CSR Parternship</b> <br/>
+                            CSR partnerships can address local needs and challenges, boost the local economy, and strengthen social capital.<br/> 
+                            
                     </p>
                 </div>
             </a>
             <a
                 href="#"
                 className="flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-8">
-                <img
-                    className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg"
-                    src="/docs/images/blog/image-4.jpg"
-                    alt=""
-                />
+                
                 <div className="flex flex-col justify-between leading-normal">
-                    <h5 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Noteworthy technology acquisitions 2021
-                    </h5>
+                    <h8 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                       What is Beneficiary Management System ?
+                    </h8>
                     <p className="mb-6 font-normal text-gray-700 dark:text-gray-400 text-lg">
-                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                    A beneficiary management system (BMS) for an NGO is a digital tool or system that helps manage the beneficiaries of an organization. It can include software, databases, and platforms that help with data collection, tracking, and engagement
                     </p>
                 </div>
+                <img
+                    className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg"
+                    src="https://i.pinimg.com/474x/69/d8/8e/69d88ef8f55fb14f729dbc8788cbf905.jpg"
+                    alt=""
+                />
 
             </a>
 
 
-<div id="animation-carousel" class="relative w-full" data-carousel="static">
+{/* <div id="animation-carousel" class="relative w-full" data-carousel="static">
     
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
        
@@ -82,7 +90,7 @@ const About = () => {
             <span class="sr-only">Next</span>
         </span>
     </button>
-</div>
+</div> */}
 
 
 
