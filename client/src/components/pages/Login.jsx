@@ -43,6 +43,8 @@ const Login = () => {
   }
 
   return (
+    <>
+    <div className="py-26 bg-gradient-to-r from-[rgb(185,185,120)] to-white rounded-2xl px-8 ">
     <div className="flex min-h-screen">
       <div className="flex flex-row w-full">
         <div className="hidden lg:flex flex-col justify-between bg-[#ffe85c] lg:p-8 xl:p-12 lg:max-w-sm xl:max-w-lg login-side">
@@ -178,7 +180,10 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
+    
+    </>
   );
 };
 

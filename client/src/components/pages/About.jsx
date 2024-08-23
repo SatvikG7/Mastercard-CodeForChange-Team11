@@ -23,6 +23,8 @@ const About = () => {
   return (
     <div>
       <Navbar page="about" />
+      <div className="py-26 bg-gradient-to-r from-[rgb(185,185,120)] to-white rounded-2xl px-8 mt-5">
+  
       <div
         className="lg:mb-0 flex "
         style={{ height: "100vh", textAlign: "center" }}>
@@ -58,8 +60,12 @@ const About = () => {
           </div>
         </section>
       </div>
-      <Footer />
+     
     </div>
+    <Footer />
+    </div>
+   
+    
   );
 };
 

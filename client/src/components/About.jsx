@@ -1,79 +1,100 @@
+
 const About = () => {
-  return (
-    <div>
-      <div className="sm:py-26 bg-gradient-to-r from-indigo-200 to-blue-100 rounded-2xl mx-8">
-        <div className="mx-auto max-w-5xl pt-10 lg:px-8 p-4">
-          <div className="mx-auto max-w-2xl text-center rounded-2xl">
-            <h2 className=" text-3xl font-bold pb-4 leading-7 text-blue-900">
-              Lorem, ipsum dolor.
-            </h2>
-            <p className=" text-lg font-bold leading-8 text-black">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur deserunt tenetur debitis expedita in non velit
-              voluptate soluta perspiciatis et fugiat omnis magni perferendis
-              nostrum, minima suscipit fugit nisi at?
-            </p>
-          </div>
-          <div className="mx-auto m-10 flex flex-row items-center justify-evenly">
-            <div className="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-              <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
-                <img className="h-full w-full" src="/mc.svg" alt="ayurveda" />
-              </div>
-              <div className="p-6">
-                <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                  lorem
-                </h5>
-                <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur similique, voluptate magni eaque asperiores iste
-                  odit esse dolorum accusantium sed iusto voluptates porro,
-                  consequuntur voluptatum, quaerat ipsum tempore culpa
-                  consequatur?
-                </p>
-              </div>
-              <div className="p-6 pt-0">
-                <button
-                  data-ripple-light="true"
-                  type="button"
-                  className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                  <a target="_blank" href="#">
-                    Read More
-                  </a>
-                </button>
-              </div>
-            </div>
-            <div className="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-              <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
-                <img className="h-full w-full" src="/mc.svg" alt="ayurveda" />
-              </div>
-              <div className="p-6">
-                <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                  lorem
-                </h5>
-                <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur similique, voluptate magni eaque asperiores iste
-                  odit esse dolorum accusantium sed iusto voluptates porro,
-                  consequuntur voluptatum, quaerat ipsum tempore culpa
-                  consequatur?
-                </p>
-              </div>
-              <div className="p-6 pt-0">
-                <button
-                  data-ripple-light="true"
-                  type="button"
-                  className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                  <a target="_blank" href="#">
-                    Read More
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
+    return (
+<div className="py-26 bg-gradient-to-r from-[rgb(185,185,120)] to-white rounded-2xl px-8">
+    <div className="max-w-5xl pt-10 lg:px-8 p-4 mx-auto">
+        <div className="flex flex-col space-y-8"> {/* Flex container with equal vertical spacing */}
+            <a
+                href="#"
+                className="flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-8">
+                <img
+                    className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg"
+                    src="/docs/images/blog/image-4.jpg"
+                    alt=""
+                />
+                <div className="flex flex-col justify-between leading-normal">
+                    <h5 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Noteworthy technology acquisitions 2021
+                    </h5>
+                    <p className="mb-6 font-normal text-gray-700 dark:text-gray-400 text-lg">
+                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                    </p>
+                </div>
+            </a>
+            <a
+                href="#"
+                className="flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-8">
+                <img
+                    className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg"
+                    src="/docs/images/blog/image-4.jpg"
+                    alt=""
+                />
+                <div className="flex flex-col justify-between leading-normal">
+                    <h5 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Noteworthy technology acquisitions 2021
+                    </h5>
+                    <p className="mb-6 font-normal text-gray-700 dark:text-gray-400 text-lg">
+                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                    </p>
+                </div>
+
+            </a>
+
+
+<div id="animation-carousel" class="relative w-full" data-carousel="static">
+    
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+       
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
         </div>
-      </div>
+        
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+        
+        <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+  
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+       
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
     </div>
-  );
+   
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+
+
+
+</div>
+
+        </div>
+    </div>
+
+
+  
+    );
 };
 
 export default About;
