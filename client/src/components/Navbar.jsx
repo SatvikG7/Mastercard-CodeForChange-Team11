@@ -86,42 +86,48 @@ const Navbar = ({ page }) => {
                 : "hidden w-full md:block md:w-auto"
             }
             id="navbar-default">
-            <nav className="bg-[rgb(230,169,126)] dark:bg-gray-700">
+            <nav className="bg-[orange] dark:bg-gray-700">
               <div className="max-w-screen-xl px-4 py-3 mx-auto">
                 <div className="flex items-center">
                   <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                     <li>
                       <a href="/" className="text-gray-900 dark:text-white hover:underline" aria-current="page">
-                        <b>Home</b>
+                        <h4>Home</h4>
                       </a>
                     </li>
                     <li>
                       <a href="/about" className="text-gray-900 dark:text-white hover:underline py-1">
-                        <b>Programs</b>
+                        <h4>Programs</h4>
                       </a>
                     </li>
                     <li>
                       <a href="/programs" className="text-gray-900 dark:text-white hover:underline py-1">
-                        <b>Dashboard</b>
+                        <h4>Dashboard</h4>
                       </a>
                     </li>
                     <li>
                       <a href="/donation" className="text-gray-900 dark:text-white hover:underline py-1">
-                        <b>Donation</b>
+                        <h4>Donation</h4>
                       </a>
                     </li>
                     <li>
                       <a href="/about" className="text-gray-900 dark:text-white hover:underline py-1">
-                      <b>About us</b>
+                      <h4>About us</h4>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/about" className="text-gray-900 dark:text-white hover:underline py-1">
+                      <h4>Impact</h4>
                       </a>
                     </li>
 
                     {user && user.role === "admin" ? (
                       <li>
                         <a href="/admin" className="text-gray-900 dark:text-white hover:underline">
-                          Admin Dashboard
+                          <H4>Impact</H4>
                         </a>
                       </li>
+                      
                       
                     ) : null}
 

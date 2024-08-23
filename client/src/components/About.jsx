@@ -1,52 +1,78 @@
 
 const About = () => {
     return (
-<div className="py-26 bg-gradient-to-r from-[rgb(217,112,37)] to-white rounded-2xl px-8">
+<div className="py-26 bg-gradient-to-r from-[orange] to-white rounded-2xl px-8">
     <div className="max-w-5xl pt-10 lg:px-8 p-4 mx-auto">
         <div className="flex flex-col space-y-8"> {/* Flex container with equal vertical spacing */}
+        <a
+                href="#"
+                className="flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-8">
+                
+                <div className="flex flex-col justify-between leading-normal">
+                     <h7 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                       Education Beneficiary
+                    </h7>
+                    <p className="mb-6 font-normal text-gray-700 dark:text-gray-400 text-lg">
+                        Students receiving scholarships, schools obtaining infrastructure support and participating in literacy programs.
+                    </p>
+                </div>
+                <img
+                    className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg"
+                    src="https://i.pinimg.com/564x/57/26/c1/5726c18de8f54cd9c05957e702af63fc.jpg"
+                    alt=""
+                /></a>
             <a
                 href="#"
                 className="flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-8">
                 <img
-                    className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg mr-3"
-                    src="https://i.pinimg.com/474x/44/27/92/442792d343e2b6b84c76caf5ac6be243.jpg"
-                    alt=""
+                    className ="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg mr-4"
+                    src="https://www.hdfcergo.com/images/default-source/health-insurance/nominee-in-health-insurance.jpg"
+                    alt="" 
                 />
                 <div className="flex flex-col justify-between leading-normal">
-                    <h5 className="mb-6 text-5xl font-bold tracking-tight text-orange-500 dark:text-white">
-                        Y4D Foundation
-                    </h5>
+                    <h7 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                       Health Beneficiary 
+                    </h7>
                     <p className="mb-6 font-normal text-gray-700 dark:text-gray-400 text-lg">
-                       <b>- Child Upliftment</b> <br/>
-                            The efforts made to improve the well being, education and overall well-being of children. <br/>
-                      
-                       <b>- Youth Empowerment  </b> <br/>
-                            Creates opportunity and environment where young people can develop skills, confidence and influence their own lives contributing positively to the society.<br/> 
-                       <b>- CSR Parternship</b> <br/>
-                            CSR partnerships can address local needs and challenges, boost the local economy, and strengthen social capital.<br/> 
-                            
+                  Patients requiring medical care, individuals needing vaccinations and communities benefiting from health education.
                     </p>
                 </div>
-            </a>
+                </a>
             <a
                 href="#"
                 className="flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-8">
                 
                 <div className="flex flex-col justify-between leading-normal">
-                    <h8 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-                       What is Beneficiary Management System ?
-                    </h8>
+                    <h7 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Environmental Beneficiary
+                    </h7>
                     <p className="mb-6 font-normal text-gray-700 dark:text-gray-400 text-lg">
-                    A beneficiary management system (BMS) for an NGO is a digital tool or system that helps manage the beneficiaries of an organization. It can include software, databases, and platforms that help with data collection, tracking, and engagement
+                    Communities benefiting from clesn water projects, regions undergoing reforestation and inidviduals involved in environmental education.
                     </p>
                 </div>
                 <img
                     className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg"
-                    src="https://i.pinimg.com/474x/69/d8/8e/69d88ef8f55fb14f729dbc8788cbf905.jpg"
+                    src="https://www.cyberswift.com/blog/wp-content/uploads/2023/05/csr-program-management-1140x760.jpg"
                     alt=""
                 />
-
-            </a>
+                </a>
+                <a
+                href="#"
+                className="flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-8">
+                <img
+                    className ="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg mr-4"
+                    src="https://www.churchlawcenter.com/wp-content/uploads/2022/06/What-is-a-Social-Welfare-Organization-and-How-Is-It-Different-Than-a-Charity.jpg"
+                    alt="" 
+                />
+                <div className="flex flex-col justify-between leading-normal">
+                    <h7 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Social Welfare Beneficiary 
+                    </h7>
+                    <p className="mb-6 font-normal text-gray-700 dark:text-gray-400 text-lg">
+                    Underprivileged families, elderly individuals receiving social services and women and children in empowerment programs.
+                    </p>
+                </div>
+                </a>
 
 
 {/* <div id="animation-carousel" class="relative w-full" data-carousel="static">
