@@ -13,12 +13,18 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
+<<<<<<< HEAD
     "flowbite": "^2.5.1",
     "flowbite-react": "^0.10.1",
+=======
+    "dotenv": "^16.4.5",
+>>>>>>> 4971b8217e4b6393ff5bd693e5873a5062f70313
     "framer-motion": "^11.3.24",
+    "imagekitio-react": "^4.2.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.0",
     "react-toastify": "^10.0.5",
     "swiper": "^11.1.10"
