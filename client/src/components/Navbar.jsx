@@ -116,7 +116,7 @@ const Navbar = ({ page }) => {
                       </a>
                     </li>
                     <li>
-                      <a href="/about" className="text-gray-900 dark:text-white hover:underline py-1">
+                      <a href="/impact" className="text-gray-900 dark:text-white hover:underline py-1">
                       <h4>Impact</h4>
                       </a>
                     </li>

@@ -14,6 +14,7 @@ import AdminDashboard from "./components/pages/AdminDashboard.jsx";
 import Unauthorized from "./components/pages/Unauthorized.jsx";
 import NotFound from "./components/pages/NotFound.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import  Impact  from "./components/pages/impact.jsx";
 
 function App() {
   const { user } = useAuthContext();
@@ -42,7 +43,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/programs" element={<Signup />} />
-            <Route path="/donations" element={<Signup />} />
+            <Route path="/impact" element={<Impact />} />
 
             <Route
               path="/admin"
